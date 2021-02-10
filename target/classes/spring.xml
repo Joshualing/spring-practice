@@ -9,7 +9,6 @@
         ">
 
     <context:component-scan base-package="com.spring.beans" />
-    <context:component-scan base-package="com.spring.demo" />
 
 <!--    <bean name="xiaowang" class="com.spring.factory.StaticFactory" factory-method="getPerson">-->
 <!--        <constructor-arg name="name" value="xiaowang"></constructor-arg>-->
@@ -17,11 +16,11 @@
 <!--        <constructor-arg name="age" value="19"></constructor-arg>-->
 <!--    </bean>-->
 
-    <bean id="lifeCycle" class="com.spring.beans.LifeCycle" init-method="init" destroy-method="destroy">
-        <property name="unmeaning" value="111"></property>
-    </bean>
+<!--    <bean id="lifeCycle" class="com.spring.beans.LifeCycle" init-method="init" destroy-method="destroy">-->
+<!--        <property name="unmeaning" value="111"></property>-->
+<!--    </bean>-->
 
-    <bean id="beanPostProcessor" class="com.spring.beans.BeanPostProcess" ></bean>
+<!--    <bean id="beanPostProcessor" class="com.spring.beans.BeanPostProcess" ></bean>-->
 <!--    <bean id="1" name="xiaozhang" class="com.spring.beans.Person">-->
 <!--        <constructor-arg name="name" value="xiaozhang"></constructor-arg>-->
 <!--        <constructor-arg name="sex" value="male"></constructor-arg>-->

@@ -6,7 +6,7 @@ import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
-//@Component
+@Component(value = "xiaozhang")
 public class Person implements InitializingBean, DisposableBean {
 
     private String name;
@@ -20,7 +20,7 @@ public class Person implements InitializingBean, DisposableBean {
         return name;
     }
 
-    //@Value("xiaowang")
+    @Value("xiaowang")
     public void setName(String name) {
         this.name = name;
     }
@@ -29,7 +29,7 @@ public class Person implements InitializingBean, DisposableBean {
         return sex;
     }
 
-    //@Value("female")
+    @Value("female")
     public void setSex(String sex) {
         this.sex = sex;
     }
@@ -38,7 +38,7 @@ public class Person implements InitializingBean, DisposableBean {
         return age;
     }
 
-    //@Value("16")
+    @Value("16")
     public void setAge(int age) {
         this.age = age;
     }
@@ -48,10 +48,7 @@ public class Person implements InitializingBean, DisposableBean {
         System.out.println("fun...");
     }
 
-    public Person(String name, String sex, int age) {
-        this.name = name;
-        this.sex = sex;
-        this.age = age;
+    public Person() {
     }
 
     @Override

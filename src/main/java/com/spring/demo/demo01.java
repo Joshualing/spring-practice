@@ -6,32 +6,22 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.stereotype.Component;
 
+/**
+ * @Component
+ * @Service
+ * @Controller
+ * @Repository
+ * 上面的四个注解的功能都是一样的，都是用来创建Bean实例，字面区分而已
+ *
+ * 使用注解的步骤
+ * 1.引入AOP依赖
+ * 2.开启组件扫描
+ */
 @Component("demo01")
 public class demo01 {
-    private Person person;
-
-    public Person getPerson() {
-        return person;
-    }
-
-
     public static void main(String[] args) {
-        /**
-         * 静态工厂
-         */
         ApplicationContext applicationContext=new ClassPathXmlApplicationContext("spring.xml");
-        System.out.println(applicationContext.getBean("lifeCycle"));
+        System.out.println(applicationContext.getBean("xiaozhang"));
         ((ClassPathXmlApplicationContext)applicationContext).close();
-        /**
-         * 注解注入
-         */
-        //demo01 d1 = (demo01)new ClassPathXmlApplicationContext("spring.xml").getBean("xiaowang");
-        //System.out.println(d1.getPerson());
-        /**
-         * xml注入
-         */
-        //ApplicationContext ctx = new ClassPathXmlApplicationContext("spring.xml");
-        //Person xiaozhang = (Person)ctx.getBean("xiaozhang");
-        //System.out.println(xiaozhang);
     }
 }
