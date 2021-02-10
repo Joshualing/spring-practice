@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 //@Component
-public class Person implements InitializingBean, DisposableBean {
+public class Person {
 
     private String name;
 
@@ -61,13 +61,5 @@ public class Person implements InitializingBean, DisposableBean {
                 ", sex='" + sex + '\'' +
                 ", age=" + age +
                 '}';
-    }
-
-    public void afterPropertiesSet() throws Exception {
-        System.out.println("afterPropertiesSet");
-    }
-
-    public void destroy() throws Exception {
-        System.out.println("destory");
     }
 }
