@@ -1,3 +1,4 @@
+<!--
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -10,20 +11,20 @@
 
     <context:component-scan base-package="com.spring.beans" />
 
-<!--    <bean name="xiaowang" class="com.spring.factory.StaticFactory" factory-method="getPerson">-->
-<!--        <constructor-arg name="name" value="xiaowang"></constructor-arg>-->
-<!--        <constructor-arg name="sex" value="female"></constructor-arg>-->
-<!--        <constructor-arg name="age" value="19"></constructor-arg>-->
-<!--    </bean>-->
+&lt;!&ndash;    <bean name="xiaowang" class="com.spring.factory.StaticFactory" factory-method="getPerson">&ndash;&gt;
+&lt;!&ndash;        <constructor-arg name="name" value="xiaowang"></constructor-arg>&ndash;&gt;
+&lt;!&ndash;        <constructor-arg name="sex" value="female"></constructor-arg>&ndash;&gt;
+&lt;!&ndash;        <constructor-arg name="age" value="19"></constructor-arg>&ndash;&gt;
+&lt;!&ndash;    </bean>&ndash;&gt;
 
-<!--    <bean id="lifeCycle" class="com.spring.beans.LifeCycle" init-method="init" destroy-method="destroy">-->
-<!--        <property name="unmeaning" value="111"></property>-->
-<!--    </bean>-->
+&lt;!&ndash;    <bean id="lifeCycle" class="com.spring.beans.LifeCycle" init-method="init" destroy-method="destroy">&ndash;&gt;
+&lt;!&ndash;        <property name="unmeaning" value="111"></property>&ndash;&gt;
+&lt;!&ndash;    </bean>&ndash;&gt;
 
-<!--    <bean id="beanPostProcessor" class="com.spring.beans.BeanPostProcess" ></bean>-->
-<!--    <bean id="1" name="xiaozhang" class="com.spring.beans.Person">-->
-<!--        <constructor-arg name="name" value="xiaozhang"></constructor-arg>-->
-<!--        <constructor-arg name="sex" value="male"></constructor-arg>-->
-<!--        <constructor-arg name="age" value="18"></constructor-arg>-->
-<!--    </bean>-->
-</beans>
+&lt;!&ndash;    <bean id="beanPostProcessor" class="com.spring.beans.BeanPostProcess" ></bean>&ndash;&gt;
+&lt;!&ndash;    <bean id="1" name="xiaozhang" class="com.spring.beans.Person">&ndash;&gt;
+&lt;!&ndash;        <constructor-arg name="name" value="xiaozhang"></constructor-arg>&ndash;&gt;
+&lt;!&ndash;        <constructor-arg name="sex" value="male"></constructor-arg>&ndash;&gt;
+&lt;!&ndash;        <constructor-arg name="age" value="18"></constructor-arg>&ndash;&gt;
+&lt;!&ndash;    </bean>&ndash;&gt;
+</beans>-->
