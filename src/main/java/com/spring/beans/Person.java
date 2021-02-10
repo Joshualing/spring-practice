@@ -3,11 +3,17 @@ package com.spring.beans;
 import com.sun.org.glassfish.external.probe.provider.annotations.Probe;
 import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.InitializingBean;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 @Component(value = "xiaozhang")
 public class Person implements InitializingBean, DisposableBean {
+
+    @Autowired
+    @Qualifier(value = "lc")
+    private LifeCycle lifeCycle;
 
     private String name;
 
@@ -48,16 +54,17 @@ public class Person implements InitializingBean, DisposableBean {
         System.out.println("fun...");
     }
 
-    public Person() {
-    }
-
     @Override
     public String toString() {
         return "Person{" +
-                "name='" + name + '\'' +
+                "lifeCycle=" + lifeCycle +
+                ", name='" + name + '\'' +
                 ", sex='" + sex + '\'' +
                 ", age=" + age +
                 '}';
+    }
+
+    public Person() {
     }
 
     public void afterPropertiesSet() throws Exception {

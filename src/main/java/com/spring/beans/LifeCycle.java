@@ -1,5 +1,8 @@
 package com.spring.beans;
 
+import org.springframework.stereotype.Component;
+
+@Component(value = "lc")
 public class LifeCycle {
     private int unmeaning;
 
