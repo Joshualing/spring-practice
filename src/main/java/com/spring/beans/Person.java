@@ -6,52 +6,23 @@ import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
-//@Component
-public class Person implements InitializingBean, DisposableBean {
+@Component(value = "xiaoWang")
+public class Person{
 
+    @Value("xiaowang")
     private String name;
 
+    @Value("male")
     private String sex;
 
+    @Value("18")
     private int age;
-
-
-    public String getName() {
-        return name;
-    }
-
-    //@Value("xiaowang")
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getSex() {
-        return sex;
-    }
-
-    //@Value("female")
-    public void setSex(String sex) {
-        this.sex = sex;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    //@Value("16")
-    public void setAge(int age) {
-        this.age = age;
-    }
-
 
     public  void fun(){
         System.out.println("fun...");
     }
 
-    public Person(String name, String sex, int age) {
-        this.name = name;
-        this.sex = sex;
-        this.age = age;
+    public Person() {
     }
 
     @Override
@@ -61,13 +32,5 @@ public class Person implements InitializingBean, DisposableBean {
                 ", sex='" + sex + '\'' +
                 ", age=" + age +
                 '}';
-    }
-
-    public void afterPropertiesSet() throws Exception {
-        System.out.println("afterPropertiesSet");
-    }
-
-    public void destroy() throws Exception {
-        System.out.println("destory");
     }
 }
