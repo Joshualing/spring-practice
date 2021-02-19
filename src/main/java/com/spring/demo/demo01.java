@@ -18,6 +18,5 @@ public class demo01 {
     public void testAop(){
         ApplicationContext applicationContext=new ClassPathXmlApplicationContext("spring.xml");
         ((Person)applicationContext.getBean("xiaoWang")).fun();
-        System.out.println(((Person) applicationContext.getBean("xiaoWang")));
     }
 }
